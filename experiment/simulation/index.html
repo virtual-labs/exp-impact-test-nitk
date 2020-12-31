@@ -1,13 +1,279 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<!-- Add CSS at the head of HTML file -->
-    <link rel="stylesheet" href="./css/main.css">
-</head>
-<body>
-		<!-- Your code goes here-->
+<meta charset="UTF-8">
+<title>SOLVE</title>
+<link rel="stylesheet" href="css/iv.css" />
+<script type="text/javascript" src="js/iv.js"></script>
+<script>
+var simsubscreennum=0;
+var temp=0;
+var snd = document.getElementById("sound");
 
-	<!-- Add JS at the bottom of HTML file --> 
-        <script src="./js/main.js"></script>
-</body>
+</script>
+</head>
+
+<body style="margin:0; font-family:verdana;">
+<div id="simscreen">
+<div id="title"><h3>IMPACT TEST ON AGGREGATE </h3></div>
+<div class="simsubscreen" id="canvas0" >
+<h4 class="incanvas">Objective:</h4>
+<p class="incanvas" style="font-size:14px;">To evaluate the toughness of aggregates to break down under application of impact and to determine aggregate impact value of the given sample of aggregate.</p><br/>
+<h4 class="incanvas">Apparatus used:</h4>
+<p class="incanvas" style="font-size:14px;">Impact Testing Machine, Tamping Rod, Trowel, Cylindrical Mould, Levelling Rod, Weighing Balance etc.</p>
+<img style="position:absolute; left:120px; top:265px; max-width:200px; height:240px;width:100%" title="Impact testing machine"  src="images/1.png" />
+<img style="position:absolute; left:330px; top:240px;" src="images/table2.png" />
+<img style="position:absolute; left:430px; top:225px; max-width:250px;width:100%;" title="trowel,levelling rod, weighing balance"  src="images/2.png" />
+<img style="position:absolute; left:365px; top:265px; width:70px;" title="cylindrical mould" src="images/3.png" />
+<img style="position:absolute; left:0px; top:170px;max-width:18%;width:100%;transform: rotateY(180deg)" src="images/man.png" />
+<br>&nbsp;<span class="tooltip" style="border-bottom:1px dotted ; color:red;text-align:justify">Description
+	<span class="tooltiptext">
+		<p><strong style="color:red">Toughness</strong>: is the amount of energy per unit volume that a material can absorb before rupturing.  </p>
+		<p><strong style="color:red">Impact value of aggregate</strong>: is a measure of resistance to sudden impact or shock, which may differ from its resistance to gradually applied compressive load.</p>
+	</span>
+	</span>
+</div>
+
+<div class="simsubscreen" id="canvas1" style="visibility:hidden;">
+<strong class="incanvas">STEP</strong>
+<span class="circlebg">&nbsp;1&nbsp;</span>
+<p class="steptext">&nbsp;Take coarse aggregate in a pan and measure it to 350g using the weighing balance.</p>
+<img id="1-0" style="position:absolute; left:175px; top:300px;" src="images/wm1.png" />
+<img id="1-1" style="position:absolute; left:235px; top:420px;cursor:pointer" src="images/on.png" />
+<img id="1-2" style="position:absolute; left:0px; top:120px; visibility:hidden;" src="images/plate.png" />
+<img id="1-21" style="position:absolute; left:200px; top:250px; visibility:hidden;" src="images/plate2.png" />
+<img id="1-3" style="position:absolute; left:340px; top:420px;cursor:pointer" src="images/tare.png" />
+<img id="1-4" style="position:absolute; left:350px; top:120px; visibility:hidden;" src="images/capan.png" />
+<img id="1-5" style="position:absolute; left:200px; top:250px;text-align:center"></p>
+<p id="p1-1" style="position:absolute; left:278px; top:375px;"></p>
+
+</div>
+
+<div class="simsubscreen" id="canvas2" style="visibility:hidden;">
+<strong class="incanvas">STEP</strong>
+<span class="circlebg">&nbsp;2&nbsp;</span>
+<p class="steptext">&nbsp;Arrange the sieves in the decreasing order of their size. Place the pan at the bottom and then add weighed quantity of coarse aggregate.</p>
+<img id="2-5" style="position:absolute; left:35px; top:280px; visibility:hidden;" src="images/ca1.png" />
+<img id="2-1" style="position:absolute; left:10px; top:335px; width:140px;" src="images/pan.png" />
+<img id="2-2" style="position:absolute; left:230px; top:335px; width:140px;" src="images/10.png" />
+<img id="2-3" style="position:absolute; left:440px; top:335px; width:140px;" src="images/12.5.png" />
+<img id="2-4" style="position:absolute; left:80px; top:110px; visibility:hidden;" src="images/capan.png" />
+<img id="2-6" style="position:absolute; left:255px; top:150px; visibility:hidden;" src="images/cap.png" />
+</div>
+
+<div class="simsubscreen" id="canvas3" style="visibility:hidden;">
+<strong class="incanvas">STEP</strong>
+<span class="circlebg">&nbsp;3&nbsp;</span>
+<p class="steptext">&nbsp;Place the set of sieves in the mechanical shaker.</p>
+<img id="2-7" style="position:absolute; left:400px; top:120px; visibility:hidden;" src="images/5.png" />
+<img id="2-7on" style="position:absolute; left:430.5px; top:380.25px; cursor:pointer; visibility:hidden;" src="images/s_on.png" />
+<img id="2-7onon" style="position:absolute; left:429px; top:380px; visibility:hidden;" src="images/onon.png" />
+<img id="2-8" style="position:absolute; left:10px; top:250px; width:140px; visibility:hidden;" src="images/sieveset.png" />
+<img id="2-9" style="position:absolute; left:120px; top:170px; visibility:hidden;" src="images/9.png" />
+<img id="2-7l" style="position:absolute; left:434px; top:140px; visibility:hidden;" src="images/6.png" />
+<img id="2-7r" style="position:absolute; left:545px; top:145px; visibility:hidden;" src="images/6.png" />
+</div>
+
+<div id="canvas4" class="simsubscreen" style="visibility:hidden;">
+<strong class="incanvas">STEP</strong>
+<span class="circlebg">&nbsp;4&nbsp;</span>
+<p class="steptext">&nbsp;Collect the coarse aggregate retained on 10mm sieve in a separate container.</p>
+<img id="4-1" style="position:absolute; left:400px; top:120px; " src="images/5.png" />
+<img id="4-2" style="position:absolute; left:450px; top:195px; width:110px; " src="images/sieveset.png" />
+<img id="4-3" style="position:absolute; left:437.5px; top:195px; " src="images/9.png" />
+<img id="4-3l" style="position:absolute; left:434px; top:176.5px; " src="images/6.png" />
+<img id="4-3r" style="position:absolute; left:545px; top:183px; " src="images/6.png" />
+
+<!-- <img id="4-4" style="position:absolute; left:10px; top:335px; width:140px; visibility:hidden;" src="images/pan.png" /> -->
+<!-- <img id="4-5" style="position:absolute; left:230px; top:335px; width:140px; visibility:hidden;" src="images/10.png" /> -->
+<!-- <img id="4-6" style="position:absolute; left:440px; top:335px; width:140px; visibility:hidden;" src="images/12.5.png" /> -->
+<!-- <img id="4-7" style="position:absolute; left:255px; top:150px; visibility:hidden;" src="images/cap.png" /> -->
+
+<img id="4-8" style="position:absolute; left:27.5px; top:318px; visibility:hidden;" src="images/ca1.png" />
+<img id="4-4" style="position:absolute; left:10px; top:335px; width:140px; visibility:hidden;" src="images/pan.png" />
+<img id="4-5" style="position:absolute; left:10px; top:297.5px; width:140px; visibility:hidden;" src="images/filled10.png" />
+<img id="4-6" style="position:absolute; left:10px; top:260px; width:140px; visibility:hidden;" src="images/12.5.png" />
+<img id="4-7" style="position:absolute; left:9.75px; top:250px; visibility:hidden;" src="images/cap.png" />
+<img id="4-11" style="position:absolute; left:72px; top:321px; visibility:hidden;" src="images/ca1.png" />
+<img id="4-113" style="position:absolute; left:82px; top:328px; visibility:hidden;" src="images/ca1.png" />
+<img id="4-112" style="position:absolute; left:55px; top:330px; visibility:hidden;" src="images/ca1.png" />
+<img id="4-114" style="position:absolute; left:48px; top:324px; visibility:hidden;" src="images/ca1.png" />
+<img id="4-9" style="position:absolute; left:9.75px; top:300px; visibility:hidden;" src="images/plate.png" />
+<img id="4-10" style="position:absolute; left:440px; top:300px; visibility:hidden;" src="images/10-1.png" />
+</div>
+
+
+<div id="canvas5" class="simsubscreen" style="visibility:hidden;">
+<strong class="incanvas">STEP</strong>
+<span class="circlebg">&nbsp;5&nbsp;</span>
+<p class="steptext">&nbsp;Note down the empty weight cylinder W<sub>1</sub>(g). Then fill the cylinder with the aggregates retained on 10mm sieve in 4 layers.</p>
+<img id="5-1" style="position:absolute; left:330px; top:280px;" src="images/wm1.png" />
+<img id="5-1a" style="position:absolute; left:390px; top:400px;" src="images/on.png" />
+<img id="5-1b" style="position:absolute; left:495px; top:400px;" src="images/tare.png" />
+
+<img id="5-36" style="position:absolute; left:415px; top:240px; visibility:hidden;" src="images/ca1.png" /><!-- fill in cylinder -->
+<img id="5-35" style="position:absolute; left:415px; top:235px; visibility:hidden;" src="images/ca1.png" /><!-- fill in cylinder -->
+<img id="5-37" style="position:absolute; left:415px; top:230px; visibility:hidden;" src="images/ca1.png" /><!-- fill in cylinder -->
+<img id="5-38" style="position:absolute; left:415px; top:225px; visibility:hidden;" src="images/ca1.png" /><!-- fill in cylinder -->
+<img id="5-39" style="position:absolute; left:415px; top:220px; visibility:hidden;" src="images/ca1.png" /><!-- fill in cylinder -->
+<img id="5-310" style="position:absolute; left:416.5px; top:222px; visibility:hidden;" src="images/ca1.png" /><!-- fill in cylinder -->
+
+<img id="5-2" style="position:absolute; left:35px; top:280px;" src="images/3.png" />
+<img id="5-9" style="position:absolute; left:405px; top:220px; visibility:hidden;" src="images/3-1.png" />
+<p id="p5-1" style="position:absolute; left:20px; top:470px; font-size:15px;">Weight of empty cylinder (W<sub>1</sub>) = _________</p>
+<p id="p5-2" style="position:absolute; left:432.5px; top:356px;text-align:center "></p>
+
+<img id="5-31" style="position:absolute; left:72px; top:321px; visibility:hidden;" src="images/ca1.png" />
+<img id="5-33" style="position:absolute; left:82px; top:328px; visibility:hidden;" src="images/ca1.png" />
+<img id="5-32" style="position:absolute; left:55px; top:330px; visibility:hidden;" src="images/ca1.png" />
+<img id="5-34" style="position:absolute; left:48px; top:324px; visibility:hidden;" src="images/ca1.png" />
+<img id="5-4" style="position:absolute; left:9.75px; top:300px; visibility:hidden;" src="images/plate.png" />
+
+<img id="5-5" style="position:absolute; left:0px; top:150px; visibility:hidden;" src="images/trowel.png" />
+<img id="5-6" style="position:absolute; left:10px; top:270px; visibility:hidden;" src="images/t2.png" />
+<img id="5-6t" style="position:absolute; left:320px; top:145px; visibility:hidden;" src="images/t2.png" />
+
+<img id="5-7l" style="position:absolute; left:415px; top:98px; visibility:hidden;" src="images/rodl.png" />
+<img id="5-7r" style="position:absolute; left:415px; top:98px; visibility:hidden;" src="images/rod.png" />
+
+<img id="5-8" style="position:absolute; left:317.5px; top:100px; visibility:hidden;" src="images/tr.png" /><!-- leveling rod -->
+
+</div>
+
+<div id="canvas6" class="simsubscreen" style="visibility:hidden;">
+<strong class="incanvas">STEP</strong>
+<span class="circlebg">&nbsp;6&nbsp;</span>
+<p class="steptext">&nbsp;Note down the weight of the cylinder along with the aggregates W<sub>2</sub>(g).</p>
+<img id="6-1" style="position:absolute; left:10px; top:290px;" src="images/wm1.png" />
+<img id="6-1a" style="position:absolute; left:70px; top:410px;cursor:pointer" src="images/on.png" />
+<img id="6-1b" style="position:absolute; left:175px; top:410px;cursor:pointer" src="images/tare.png" />
+<img id="6-2" style="position:absolute; left:460px; top:220px;" src="images/3-1.png" />
+<p id="p6-1" style="position:absolute; left:300px; top:440px; font-size:15px;">Weight of cylinder with the aggregates(W<sub>2</sub>) = _________</p>
+<p id="p6-2" style="position:absolute; left:120px; top:366px;text-align:center "></p>
+<!-- <img id="5-8" style="position:absolute; left:317.5px; top:100px; visibility:hidden;" src="images/tr.png" /><!-- leveling rod --> 
+</div>
+
+<div id="canvas7" class="simsubscreen" style="visibility:hidden;">
+<strong class="incanvas">STEP</strong>
+<span class="circlebg">&nbsp;7&nbsp;</span>
+<p class="steptext">&nbsp;Place the cylinder in the setup. Release the hammer in order to apply the impact load. 15 blows are given at an interval of not less 1 seconds.</p>
+<img id="7-1" style="position:absolute; left:300px; top:90px;" src="images/1-1.png" />
+<img id="7-3" style="position:absolute; left:335.20px; top:403px; visibility:hidden;" src="images/1-3.png" />
+<img id="7-4" style="position:absolute; left:313px; top:199.5px;" src="images/1-4.png" />
+<img id="7-2" style="position:absolute; left:242px; top:145px;" src="images/1-2.png" />
+<img id="7-2h"  style="position:absolute; left:241px; top:58px; visibility:hidden;" src="images/1-6.png" />
+<img id="gate" class="droppable" style="position:absolute; left:386px; top:178px; cursor:pointer; visibility:hidden;" src="images/circle.png" />
+<img id="7-5" style="position:absolute; left:384px; top:178px; cursor:pointer;" src="images/1-5.png" />
+<img id="ball" style="position:absolute; left:604px; top:179px; cursor:pointer; visibility:hidden;" src="images/1-5.png" />
+<img id="7-6" style="position:absolute; width:80px; left:550px; top:400px; cursor:pointer;" src="images/3-1.png" />
+<img id="7-62" style="position:absolute; width:110px; left:550px; top:400px; cursor:pointer; visibility:hidden;" src="images/3-2.png" />
+<img id="grey1" style="position:absolute; left:40px; top:186px; visibility:hidden;" src="images/grey.png" />
+<img id="grey2" style="position:absolute; left:50px; top:186px; visibility:hidden;" src="images/grey.png" />
+<p id="p7-1" style="position:absolute; left:55px; top:130px; font-size:28px;  visibility:hidden; color:white;"></p>
+<p id="p7-2" style="position:absolute; left:55px; top:165px; font-size:28px;  visibility:hidden; color:white;"></p>
+<p id="p7-3" style="position:absolute; left:520px; top:80px; font-size:13px;  visibility:hidden; ">Drag and drop the </br>screw in the position.</p>
+<audio id="sound" src="images/drop2.mp3"></audio>
+
+</div>
+
+<div id="canvas8" class="simsubscreen" style="visibility:hidden;">
+<strong class="incanvas">STEP</strong>
+<span class="circlebg">&nbsp;8&nbsp;</span>
+<p class="steptext">&nbsp;Transfer the aggregates to the sieve (2.36mm), then place it in the mechanical shaker.</p>
+<!-- <img id="8-3" style="position:absolute; left:10px; top:236px;" src="images/2.36.png" /> -->
+
+
+<img id="8-7" style="position:absolute; left:400px; top:95px; visibility:hidden;" src="images/5.png" />
+<img id="8-7on" style="position:absolute; left:430.5px; top:355.25px; cursor:pointer; visibility:hidden;" src="images/s_on.png" />
+<img id="8-7onon" style="position:absolute; left:429px; top:355px; visibility:hidden;" src="images/onon.png" />
+<img id="8-6" style="position:absolute; left:9.75px; top:285px; visibility:hidden;" src="images/ss.png" />
+<img id="8-8" style="position:absolute; left:120px; top:170px; visibility:hidden;" src="images/9.png" />
+<img id="8-7l" style="position:absolute; left:434px; top:140px; visibility:hidden;" src="images/6.png" />
+<img id="8-7r" style="position:absolute; left:545px; top:145px; visibility:hidden;" src="images/6.png" />
+
+
+<img id="8-4" style="position:absolute; left:25px; top:320px; visibility:hidden;" src="images/ca2.png" />
+<img id="8-1" style="position:absolute; left:10px; top:335px; width:140px;" src="images/pan.png" />
+<img id="8-2" style="position:absolute; left:230px; top:335px; width:140px;" src="images/2.36.png" />
+<img id="8-3" style="position:absolute; width:130px;  left:90px; top:150px; visibility:hidden;" src="images/3-2.png" />
+<img id="8-5" style="position:absolute; left:255px; top:150px; visibility:hidden;" src="images/cap.png" />
+
+</div>
+
+<div id="canvas9" class="simsubscreen" style="visibility:hidden;">
+<strong class="incanvas">STEP</strong>
+<span class="circlebg">&nbsp;9&nbsp;</span>
+<p class="steptext">&nbsp;Note down the weight of aggregate passing through 2.36mm W<sub>3</sub>(g).</p>
+
+<img id="9-9" style="position:absolute; left:330px; top:280px; visibility:hidden;" src="images/wm1.png" />
+<img id="9-9a" style="position:absolute; left:390px; top:400px;  visibility:hidden;cursor:pointer" src="images/on.png" />
+<img id="9-9b" style="position:absolute; left:495px; top:400px;  visibility:hidden;cursor:pointer" src="images/tare.png" />
+
+<img id="9-1" style="position:absolute; left:400px; top:95px; " src="images/5.png" />
+<img id="9-2" style="position:absolute; left:450px; top:195px; width:110px; " src="images/ss.png" />
+<img id="9-3" style="position:absolute; left:437.5px; top:195px; " src="images/9.png" />
+<img id="9-3l" style="position:absolute; left:434px; top:176.5px; " src="images/6.png" />
+<img id="9-3r" style="position:absolute; left:545px; top:183px; " src="images/6.png" />
+<img id="9-10" style="position:absolute; left:360px; top:235px;cursor:pointer;visibility:hidden " src="images/plate.png" />
+<img id="9-10a" style="position:absolute; left:360px; top:235px;cursor:pointer;visibility:hidden " src="images/platePan.png" />
+
+<img id="9-8" style="position:absolute; left:25px; top:360px; visibility:hidden;" src="images/ca2.png" />
+<img id="9-6" style="position:absolute; left:25px; top:320px; visibility:hidden;" src="images/ca1.png" />
+<img id="9-4" style="position:absolute; left:10px; top:335px; width:140px; visibility:hidden;" src="images/pan.png" />
+<img id="9-41" style="position:absolute; left:10px; top:335px; width:140px; visibility:hidden;" src="images/pan2.png" />
+<img id="9-41a" style="position:absolute; left:10px; top:335px;visibility:hidden;cursor:pointer" src="images/panHand.png" />
+<img id="9-41b" style="position:absolute; left:320px; top:100px;visibility:hidden;cursor:pointer" src="images/panTilt.png" />
+<img id="9-5" style="position:absolute; left:10px; top:297.5px; width:140px; visibility:hidden;" src="images/filled236.png" />
+<img id="9-7" style="position:absolute; left:9.75px; top:285px; visibility:hidden;" src="images/cap.png" />
+
+
+<p id="p9-1" style="position:absolute; left:10px; top:480px;font-size:15px; visibility:hidden;">Weight of aggregate passing through 2.36mm sieve (W<sub>3</sub>)= _________</p>
+<p id="p9-2" style="position:absolute; left:430px; top:356px; visibility:hidden;">000.00</p>
+
+</div>
+
+
+<div id="canvas10" class="simsubscreen" style="visibility:hidden;">
+<strong class="incanvas">STEP</strong>
+<span class="circlebg">&nbsp;10&nbsp;</span>
+<p class="steptext">&nbsp;Observation and Results.</p>
+<!-- <strong class="incanvas"><h3>Observation and Result</h3></strong> -->
+<table border=1 style="position:absolute;text-align:center; font-size:14px; width:700px;top:80px;">
+<tr>
+<!-- <td style="padding:10px;">Trial</td> -->
+<td style="padding:10px;">Empty weight of the cylinder (W<sub>1</sub>) in (g)</td>
+<td style="padding:10px;">Weight of cylinder with the aggregates (W<sub>2</sub>) in (g)</td>
+<td style="padding:10px;">Weight of aggregate passing </br>through 2.36mm sieve (W<sub>3</sub>) in (g)</td>
+</tr>
+<tr>
+<!-- <td id="t" style="padding:10px;"></td> -->
+<td id="w1" style="padding:10px;"></td>
+<td id="w2" style="padding:10px;"></td>
+<td id="w3" style="padding:10px;"></td>
+</tr>
+</table>
+
+<img id="form" style="position:absolute; left:10px; top:250px; visibility:hidden" src="images/form.png" />
+<p id="iv" style="position:absolute; left:10px; top:320px; visibility:hidden;">Impact test value = <input id="res" type="text" style="border:none;border-bottom: 1px solid;width:55px;font-family:verdana;font-size:14px;text-align:center;" autocomplete="off" oninput="checkInputValid(this)"><span id="rightAns" class="resultStyle"></span><input id="chk" type="button" value="CHECK" style="cursor:pointer" onclick="checkResult();"><span id="alertId">Please Enter Value to proceed</span></p>
+<p id="itv" style="position:absolute; left:180px; top:320px; visibility:hidden; border-bottom:double;"></p>
+<h4 id="p8-1" border="1px solid black" style="position:absolute; left:-450px; top:370px;font-family:verdana;visibility:hidden;"></h4>
+</div>
+
+
+ <!-- This is the questions division -->
+	<span id="question-div" class = "fadeIn">
+		<p id="divq" style="font-family:verdana; font-size:14px;">Both ends of the pipe must be trimmed to ensure parallel faces.</p>
+		<p id="ans"></p>
+	</span>
+<!-- nextButton -->
+<div id="nav">
+<img id="nextButton" onclick="navNext()" src="images/Next.png" />
+</div>
+<!--Blinking Arrow	-->	
+<img class ="" id="arrow1" style="visibility:hidden;" src="images/arrow1.png"/>
+
+<div id="copyright"> &copy; 2018 - <script>document.write(new Date().getFullYear())</script> SOLVE - The Virtual Lab @ NITK Surathkal, Department of Water Resources & Ocean Engineering</div>
+
+</div>
+</body> 
 </html>
