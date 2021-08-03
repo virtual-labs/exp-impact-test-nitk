@@ -29,17 +29,15 @@
 <p style="text-indent:50px; text-align:justify;">Aggregates Impact Value gives relative measure of resistance of aggregates to sudden shock or impact, which in some aggregates differs from its resistance to slow compression load. Impact Value should not be less than 45% for aggregates used for concrete other than wearing surface and 30% for concrete used in wearing surface. Table below shows the classification of aggregate with respect to aggregate impact value and limits of aggregate impact value for different types of road construction suggested by Indian Road Congress.</p>
 
 <center>
-
 <p>Classification of aggregates based on Aggregate Impact Value</p>
 <img src="./images/table1.png" alt="Parts" width=400/>
-
 </center>
 
-<center>
 
+<center>
+<p></p>
 <p>Impact Value of Aggregate for different types of pavement</p>  
 <img src="./images/table2.png" alt="Parts" />
-
 </center>
 
 <p style="text-indent:50px; text-align:justify;"><strong>Relevant Indian Standards</strong>:</p>  
