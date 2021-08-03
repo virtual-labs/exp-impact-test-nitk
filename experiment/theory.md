@@ -15,7 +15,7 @@
 <center>
   <img src="images/impacts.png">    
 
-  Aggregate Impact Testing Machine
+  <p>Aggregate Impact Testing Machine</p>
 </center>
 
 <br>
@@ -30,14 +30,14 @@
 
 <center>
 
-Classification of aggregates based on Aggregate Impact Value
+<p>Classification of aggregates based on Aggregate Impact Value</p>
 <img src="./images/table1.png" alt="Parts" width=400/>
 
 </center>
 
 <center>
 
-Impact Value of Aggregate for different types of pavement  
+<p>Impact Value of Aggregate for different types of pavement</p>  
 <img src="./images/table2.png" alt="Parts" />
 
 </center>
