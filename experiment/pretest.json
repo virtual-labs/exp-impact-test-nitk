@@ -1,0 +1,51 @@
+[{
+    "question": "Which of the following test measures the toughness of road aggregates?",
+    "answers": {
+      "a": "Impact test",
+      "b": "Abrasion test",
+      "c": "Crushing test",
+      "d": "Shape test"
+    },
+    "correctAnswer": "a"
+  },
+  {
+    "question": "Set of sieves used in this experiment is?",
+    "answers": {
+
+      "a": "12.5mm, 20mm, 10mm",
+      "b": "12.5mm, 10mm, 2.36mm",
+      "c": "10mm, 12mm, 12.5mm",
+      "d": "2.36mm, 4.75mm, 10mm"
+    },
+    "correctAnswer": "b"
+  },
+  {
+    "question": "What is diameter of cyclinder metal measure used in this experiment?",
+    "answers": {
+      "a": "75mm",
+      "b": "65mm",
+      "c": "45mm",
+      "d": "60mm"
+    },
+    "correctAnswer": "a"
+  },
+  {
+    "question": "Impact value of aggregate satisfactory for road surfacing is",
+    "answers": {
+      "a": "&lt;10%",
+      "b": "20-30%",
+      "c": "30-40%",
+      "d": "&gt;50%"
+    },
+    "correctAnswer": "b"
+  },
+  {
+    "question": "Aggregate impact value of less than 45% is suitable for",
+    "answers": {
+      "a": "Bitumen Bound Macadam Base Course",
+      "b": "WBM Base Course",
+      "c": "Concrete Base Course",
+      "d": "None of the above"
+    },
+    "correctAnswer": "b"
+}]
