@@ -1,4 +1,9 @@
-<table style="text-align:justify;">
+### Lagu paTa:
+
+#### Simulation Demo:
+<li><a href="https://youtu.be/K_rEusMExv4">https://youtu.be/K_rEusMExv4</a></li>
+
+<table style="text-align:justify;margin-top:15px;">
 <tr style="background-color: white">
 <th>References</th>
 <th>Contributors list</th>
@@ -32,7 +37,4 @@ Contributors:
 </tr>
 </table>
 
-### Lagu paTa:
 
- #### Simulation Demo:
- <li><a href="https://youtu.be/K_rEusMExv4">https://youtu.be/K_rEusMExv4</a></li>
